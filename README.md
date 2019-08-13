@@ -53,12 +53,48 @@ Escalabilidad vertical moderniza o actualiza los componentes que existen.
 ![protocolo HTTP](http://2.bp.blogspot.com/_jUCZth_DkjU/TID-jK9rWcI/AAAAAAAAAAQ/3JNIssF_KeQ/s1600/protocolo.png)
 
 
-### 7.	Explique los elementos importantes de REQUEST en HTTP
+### 7. Explique los elementos importantes de REQUEST en HTTP
 
-El comando HTTP Request permite enviar todo tipo de petición  HTTP a un URL específico que contiene la información básica sobre la petición está formada de tres partes:
+![HTTP_Response](https://mdn.mozillademos.org/files/13687/HTTP_Request.png)
 
-- El método indica el tipo de petición que se realiza .
+- Un método HTTP,  normalmente pueden ser un verbo, como: GET, POST o un nombre como: OPTIONS o HEAD, que defina la operación que el cliente quiera realizar. El objetivo de un cliente, suele ser una petición de recursos, usando GET, o presentar un valor de un formulario HTML, usando POST, aunque en otras ocasiones puede hacer otros tipos de peticiones. 
 
-- La ruta, parte de la dirección web que viene detrás del dominio.
+- La dirección del recurso pedido; la URL del recurso, sin los elementos obvios por el contexto, como pueden ser: sin el  protocolo (http://),  el dominio (aquí developer.mozilla.org), o el puerto TCP (aquí el 80). 
 
-- El protocolo, consta de HTTP y el número de versión de protocolo que se emplea.
+- La versión del protocolo HTTP.
+
+- Cabeceras HTTP opcionales, que pueden aportar información adicional a los servidores.
+
+- O un cuerpo de mensaje, en algún método, como puede ser POST, en el cual envía la información para el servidor.
+
+
+### 8. Explique los elementos importantes de RESPONSE en HTTP**
+
+![HTTP_Response](https://mdn.mozillademos.org/files/13691/HTTP_Response.png)
+
+- La versión del protocolo HTTP que están usando.
+
+- Un código de estado, indicando si la petición ha sido exitosa, o no, y debido a que.
+
+- Un mensaje de estado, una breve descripción del código de estado. 
+
+- Cabeceras HTTP, como las de las peticiones.
+
+- Opcionalmente, el recurso que se ha pedido.
+
+
+### 9. Describa con un gráfico la arquitectura Java EE
+
+![](https://users.dcc.uchile.cl/~jbarrios/J2EE/arq.gif)
+
+![](https://www.ecured.cu/images/thumb/c/ce/J2EE.png/300px-J2EE.png)
+
+- En la Capa Cliente: se ubican los clientes de nuestra aplicación y tienen diversas naturalezas.
+
+- La Capa de Presentación: contiene toda la lógica de interacción entre el programa y el cliente y viceversa. Además, es la encargada de controlar las acciones entre el usuario y la lógica del negocio.
+
+- La Capa de Lógica de Negocio: tiene a su cargo el núcleo de la aplicación. Debe ser mantenible, reutilizable, extensible y flexible.
+
+- La Capa de Integración: se llevan a cabo tareas de integración con otros sistemas.
+
+- En la Capa de Recursos: se localizan los sistemas de almacenamien to disponibles, como bancos de ficheros y bases de dato.
