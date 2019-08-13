@@ -1,4 +1,3 @@
-
 ## <p align="center">PRACTICA Nº1</p>
 
 ## <p align="center">SISTEMAS EMPRESARIALES</p>
@@ -55,7 +54,7 @@ Escalabilidad vertical moderniza o actualiza los componentes que existen.
 
 ### 7. Explique los elementos importantes de REQUEST en HTTP
 
-![HTTP_Response](https://mdn.mozillademos.org/files/13687/HTTP_Request.png)
+![HTTP_Request](https://mdn.mozillademos.org/files/13687/HTTP_Request.png)
 
 - Un método HTTP,  normalmente pueden ser un verbo, como: GET, POST o un nombre como: OPTIONS o HEAD, que defina la operación que el cliente quiera realizar. El objetivo de un cliente, suele ser una petición de recursos, usando GET, o presentar un valor de un formulario HTML, usando POST, aunque en otras ocasiones puede hacer otros tipos de peticiones. 
 
@@ -68,7 +67,7 @@ Escalabilidad vertical moderniza o actualiza los componentes que existen.
 - O un cuerpo de mensaje, en algún método, como puede ser POST, en el cual envía la información para el servidor.
 
 
-### 8. Explique los elementos importantes de RESPONSE en HTTP**
+### 8. Explique los elementos importantes de RESPONSE en HTTP
 
 ![HTTP_Response](https://mdn.mozillademos.org/files/13691/HTTP_Response.png)
 
@@ -85,9 +84,7 @@ Escalabilidad vertical moderniza o actualiza los componentes que existen.
 
 ### 9. Describa con un gráfico la arquitectura Java EE
 
-![](https://users.dcc.uchile.cl/~jbarrios/J2EE/arq.gif)
-
-![](https://www.ecured.cu/images/thumb/c/ce/J2EE.png/300px-J2EE.png)
+![Java EE](https://users.dcc.uchile.cl/~jbarrios/J2EE/arq.gif)
 
 - En la Capa Cliente: se ubican los clientes de nuestra aplicación y tienen diversas naturalezas.
 
@@ -98,3 +95,29 @@ Escalabilidad vertical moderniza o actualiza los componentes que existen.
 - La Capa de Integración: se llevan a cabo tareas de integración con otros sistemas.
 
 - En la Capa de Recursos: se localizan los sistemas de almacenamien to disponibles, como bancos de ficheros y bases de dato.
+
+
+### 11. Investigue los métodos más utilizados de las clases HttpServlet, HttpServletRequest y HttpServletResponse, y para cada uno de los métodos muestre un ejemplo
+
+**HttpServletRequest**
+
+- El método getParameter devuelve el valor de un parámetro nombrado. Si nuestro parámetro pudiera tener más de un valor, deberíamos utilizar getParameterValues en su lugar. El método getParameterValues devuelve un array de valores del parámetro nombrado.
+
+- El método getParameterNames proporciona los nombres de los parámetros.
+
+- Para peticiones GET de HTTP, el método getQueryString devuelve en un String una línea de datos desde el cliente. Debemos analizar estos datos nosotros mismos para obtener los parámetros y los valores.
+
+- Para peticones POST, PUT, y DELETE de HTTP.
+
+Si esperamos los datos en formato texto, el método getReader devuelve un BufferedReader utilizado para leer la línea de datos.    
+Si esperamos datos binarios, el método getInputStream devuelve un ServletInputStream utilizado para leer la línea de datos.
+
+**HttpServletResponse**
+
+- El método getWriter devuelve un Writer
+
+- El método getOutputStream devuelve un ServletOutputStream
+
+Se utiliza el método getWriter para devolver datos en formato texto al usuario y el método getOutputStream para devolver datos binarios.    
+
+Si cerramos el Writer o el ServletOutputStream después de haber enviado la respuesta, permitimos al servidor saber cuando la respuesta se ha completado.
